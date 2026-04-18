@@ -9,20 +9,13 @@
  */
 public class lab04main {
     public static void main(String[] args) {
+        StaffMember.showSystemName();
         Lecturer lec1 = new Lecturer("Dr. Perera", "LEC-001", "Computing", 4, 15000.0);
+        Lecturer lec2 = new Lecturer("Ms. Fernando", "LEC-002", "Mathematics", 3, 12000.0);
         LabAssistant la1 = new LabAssistant("Kasun Silva", "LA-001", "Computing", 80, 500.0);
-        UniversityPolicy.showPolicyHeader();
-        System.out.println("University Name: " + UniversityPolicy.UNIVERSITY_NAME);
+        
+        System.out.println("Total staff created: " + StaffMember.getStaffCount());
 
-        lec1.displayLecturerDetails();
-        System.out.println("Monthly Payment : " + lec1.calculateMonthlyPayment());
-        System.out.println("Bonus Estimate  : " + UniversityPolicy.calculateBonus(lec1.calculateMonthlyPayment()));
-
-        System.out.println();
-
-        la1.displayLabAssistantDetails();
-        System.out.println("Monthly Payment : " + la1.calculateMonthlyPayment());
-        System.out.println("Bonus Estimate  : " + UniversityPolicy.calculateBonus(la1.calculateMonthlyPayment()));
     }  
 
     }
